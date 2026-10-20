@@ -23,6 +23,10 @@ if (!JWT_SECRET) {
 app.use(cors());
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.json({ status: 'ok', message: 'API is running' });
+});
+
 // REGISTER
 app.post("/api/register", userRegis);
 
